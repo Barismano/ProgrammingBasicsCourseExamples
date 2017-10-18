@@ -6,25 +6,17 @@ public class Main
 {
     public static void main(String[] args)
     {
-    MagicList blaa = new MagicList();
-
-    blaa.add(3);
-    blaa.add(4);
-    blaa.add(5);
-    blaa.add(5);
-    System.out.println(blaa);
-    blaa.remove(4);
-    System.out.println(blaa);
+  
 
     }
 }
-class MagicList
+class Set
 {
     private int[] arr;
     private int count;
     private int capacity;
 
-    MagicList()
+    Set()
     {
         capacity=8;
         arr=new int[capacity];
