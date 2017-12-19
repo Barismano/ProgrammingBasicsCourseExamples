@@ -1,7 +1,7 @@
 class DynamicArray
 {
-    private int[] arr;
-    private int count;
+    private int[] arr; // указател към касива. Инициализираме масива в конструктора.
+    private int count; //променлива, в която пазим броя на елементите, които сме запазили в масива, за сега.
     private int capacity; //Бихме могли да минем и без тази променлива ,понеже може да ползваме просто arr.length, но така кода е по-четим :)
 
     DynamicArray()
