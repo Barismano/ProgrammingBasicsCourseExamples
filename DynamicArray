@@ -1,0 +1,42 @@
+class DynamicArray
+{
+    private int[] arr;
+    private int count;
+    private int capacity; //Бихме могли да минем и без тази променлива ,понеже може да ползваме просто arr.length, но така кода е по-четим :)
+
+    DynamicArray()
+    {
+        capacity=8;
+        count =0;
+        arr=new int[capacity];
+    }
+    public void add(int num)
+    {
+        if(count==capacity) //проверява дали сме запълнили масива
+            Resize();
+        arr[count]=num; // поставя елемента на първата свободна позиция,която винаги е равна на стойността на count.
+        count++;
+    }
+   private int IndexOf(int a) //проверява дали елементът го има в масива. Ако го има , връща индекса му,ако го няма връща -1(защото -1 е несъществуващ индекс)
+    {
+        for (int i = 0; i < count; i++) {
+            if(a==arr[i])// ако го срещне ,връща индекса
+                return i;
+        }
+        return -1; //ако след обхождането не е намерил елемента,връща -1
+
+    }
+    private void Resize()//като масивът е пълен,създава нов с двойна дължина и копира всички елементи от стария в новия.
+    {
+        int[] temp = new int[capacity*2];//Създава нов
+        for (int i = 0; i < count; i++) //копира
+            temp[i]=arr[i];
+        
+        arr=temp;  //пойнтера към масива се насочва към новия масив (към стария не сочи никой и той бива изтрит от garbage collector-а.
+        capacity=capacity*2;  //увеличава променливата, в която пазим капацитета .
+    }
+
+   
+
+
+}
