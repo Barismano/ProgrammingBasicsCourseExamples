@@ -84,7 +84,7 @@ class CustomStack
     void Push(String str)
     {
         if(count==arr.length)
-        {}//Resize();
+            Resize();
         arr[count]=str;
 
     }
