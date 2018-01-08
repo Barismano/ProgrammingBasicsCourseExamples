@@ -1,3 +1,10 @@
+package com.company;
+
+
+import javax.swing.*;
+import java.util.ArrayList;
+
+//Point()
 public class Main
 {
 
@@ -9,13 +16,10 @@ public class Main
 }
 class point
 {
-    int x;
+    int x;      
     int y;
     static int a;
-    void doSomething()
-    {
-
-    }
+    
     point(int x,int y)
     {
         this.x=x;
@@ -41,14 +45,13 @@ class Rect
             return true;
         return false;
  }
-    public static boolean isPointInRect(point tochica, Rect prawougulnik) {
-        boolean isByYOK = tochica.y >= Math.min(prawougulnik.p1.y, prawougulnik.p2.y) && (tochica.y <= Math.max(prawougulnik.p1.y, prawougulnik.p2.y));
-        boolean isByXOK = tochica.x >= Math.min(prawougulnik.p1.x, prawougulnik.p2.x) && (tochica.x <= Math.min(prawougulnik.p1.x, prawougulnik.p2.x));
+    public static boolean isPointInRect(point p1, Rect r) {
+        boolean isByYOK = p1.y >= Math.min(r.p1.y, r.p2.y) && (p1.y <= Math.max(r.p1.y, r.p2.y));
+        boolean isByXOK = p1.x >= Math.min(r.p1.x, r.p2.x) && (p1.x <= Math.min(r.p1.x, r.p2.x));
 
         if (isByXOK && isByYOK)
             return true;
         return false;
     }
 }
-
 
