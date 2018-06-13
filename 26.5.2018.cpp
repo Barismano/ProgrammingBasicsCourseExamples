@@ -1,15 +1,10 @@
 #include <iostream>
 #include <cmath>
 
-//
-//Абстракция
-//Капсулация
-//Наследяване
-//Полиморфизъм
+
 class Point
 {
-	private:
-		int z;
+	
 	public:
 		int x;
 		int y;
