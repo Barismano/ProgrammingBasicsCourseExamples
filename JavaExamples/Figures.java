@@ -1,12 +1,4 @@
 package com.company;
-
-
-import com.sun.xml.internal.ws.server.ServerRtException;
-import sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection;
-
-import javax.swing.*;
-import javax.xml.bind.SchemaOutputResolver;
-import java.time.Period;
 import java.util.Arrays;
 import java.util.Currency;
 import java.util.Scanner;
